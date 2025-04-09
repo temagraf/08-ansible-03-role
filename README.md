@@ -55,10 +55,10 @@
 
 8. Выложил роли в репозитории. Ссылки на репозитории ролей:
 
-[vector-role](https://github.com/temagraf/ansible_learning/tree/main/vector-role)
+[vector-role](https://github.com/temagraf/08-ansible-03-role/blob/main/vector-role)
 
-[lighthouse-role](https://github.com/temagraf/ansible_learning/tree/main/lighthouse-role)
+[lighthouse-role](https://github.com/temagraf/08-ansible-03-role/tree/blob/lighthouse-role)
 
 9. Изменил playbook на использование roles.
 
-10. Выложил playbook в репозиторий. [Ссылка](https://github.com/temagraf/ansible_learning/tree/main/playbook-ansible) на playbook.
+10. Выложил playbook в репозиторий. [Ссылка](https://github.com/temagraf/08-ansible-03-role/blob/main/playbook-ansible) на playbook.
