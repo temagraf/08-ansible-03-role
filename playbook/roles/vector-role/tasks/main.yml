@@ -1,0 +1,21 @@
+---
+- name: Download Vector package
+  ansible.builtin.get_url:
+    url: "https://packages.timber.io/vector/{{ vector_version }}/vector-{{ vector_version_suffix }}.x86_64.rpm"
+    dest: "./vector-{{ vector_version }}.rpm"
+    mode: '0644'
+
+- name: Install Vector
+  become: true
+  ansible.builtin.yum:
+    name: "./vector-{{ vector_version }}.rpm"
+    state: present
+    disable_gpg_check: true
+
+- name: Deploy Vector config
+  become: true
+  ansible.builtin.template:
+    src: "templates/vector.yaml.j2"
+    dest: "/etc/vector/vector.yaml"
+    mode: '0644'
+  notify: Restart Vector service
